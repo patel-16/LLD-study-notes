@@ -2,6 +2,7 @@ package DesignPatterns.ObserverPattern.Observer;
 
 import DesignPatterns.ObserverPattern.Observable.StockObservable;
 
+// consumer of information (for Mobile stock)
 public class IPhoneSalesPage implements NotificationAlertObserver {
 
     StockObservable iPhoneStockObservable;
