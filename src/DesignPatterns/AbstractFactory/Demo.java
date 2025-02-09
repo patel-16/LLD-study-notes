@@ -8,7 +8,7 @@ public class Demo {
 
     Vehicle luxuryVehicle = luxuryVehicleFactory.getVehicle("BMW");
 
-    VehicleFactory budgetVehicleFactory = new VehicleFactoryPark().getVehicleFactory("luxury");
+    VehicleFactory budgetVehicleFactory = new VehicleFactoryPark().getVehicleFactory("budget");
 
     Vehicle budgetVehicle = budgetVehicleFactory.getVehicle("Hyundai");
 
