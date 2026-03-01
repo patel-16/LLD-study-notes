@@ -2,6 +2,12 @@ package ElevatorLLD;
 
 import java.util.Arrays;
 
+// PO - the main file running the entire show I guess
+
+// PO - it is a good idea to refer to the UML in video/notes
+// along with navigating code in the IDE...
+// to learn as a whole...nice example must say
+
 public class Demo {
 
     public static void main(String[] args) {
@@ -18,8 +24,8 @@ public class Demo {
 
 
             // 2. Create one internal buttons for each elevator
-            InternalButton internalButton_for_elevator1 = new InternalButton(controller1);
-            InternalButton internalButton_for_elevator2 = new InternalButton(controller2);
+            InternalButton internalButtonForElevator1 = new InternalButton(controller1);
+            InternalButton internalButtonForElevator2 = new InternalButton(controller2);
 
 
             //3. create Scheduler with Nearest Strategy
@@ -33,6 +39,7 @@ public class Demo {
 
 
             // Create a 5 floor building:
+            // I guess good to check constructors
             Building building = new Building(5, externalDispatcher);
 
             // 6. Start both the elevator controllers threads
@@ -52,16 +59,19 @@ public class Demo {
                 6. External Call : Floor 2 UP
              */
 
+            // PO - it is a good idea to refer to the UML in video/notes
+            // along with navigating code in the IDE...
+            // to learn as a whole...nice example must say
             building.getFloor(3).pressUpButton();
             Thread.sleep(5);
 
             building.getFloor(5).pressDownButton();
             Thread.sleep(5);
 
-            internalButton_for_elevator1.pressButton(4); // user inside elevator 1 presses floor 4
+            internalButtonForElevator1.pressButton(4); // user inside elevator 1 presses floor 4
             Thread.sleep(5);
 
-            internalButton_for_elevator1.pressButton(5); // user inside elevator 1 presses floor 5
+            internalButtonForElevator1.pressButton(5); // user inside elevator 1 presses floor 5
             Thread.sleep(5);
 
             building.getFloor(1).pressDownButton();
@@ -70,7 +80,7 @@ public class Demo {
             building.getFloor(2).pressUpButton();
             Thread.sleep(5);
 
-            internalButton_for_elevator1.pressButton(2); // user inside elevator1 presses floor 2
+            internalButtonForElevator1.pressButton(2); // user inside elevator1 presses floor 2
         }
         catch (Exception e) {
 

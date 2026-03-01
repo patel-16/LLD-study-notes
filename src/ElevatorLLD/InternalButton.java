@@ -1,5 +1,8 @@
 package ElevatorLLD;
 
+// Note the diff in external and internal button's request,
+// external - stop
+// internal - destination
 public class InternalButton {
 
     private final ElevatorController controller;
